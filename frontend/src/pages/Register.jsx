@@ -5,7 +5,7 @@ import { auth, loginWithGoogle } from "../lib/Firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import toast from "react-hot-toast";
 
-const Register = ({ onNavigate }) => {
+const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -264,7 +264,7 @@ const Register = ({ onNavigate }) => {
             <p className="text-center text-gray-600">
               Already have an account?{" "}
               <button
-                onClick={() => onNavigate("login")}
+                onClick={() => navigate("/login")}
                 className="text-emerald-600 hover:text-emerald-700 font-semibold hover:underline transition-colors"
               >
                 Sign in
